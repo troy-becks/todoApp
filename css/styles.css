@@ -1,20 +1,94 @@
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
 body {
   background-image: url("../img/notebook.jpg");
   background-position: center;
   background-size: cover;
 }
+
 .page {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
+
 .main {
   height: 75%;
-  width: 75%;
+  width: 50%;
   background-color: rgba(0, 0, 0, .5);
   border: 3px solid #fff;
   border-radius: 10px;
+  box-shadow: 0px 0px 20px #fff;
+  font-family: "Indie Flower";
+  color: #fff;
+  text-shadow: 0px 0px 15px #000;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-area {
+  margin-bottom: 20px;
+  width: 75%;
+}
+
+.h1 {
+  margin: 0;
+  margin-top: 10px;
+}
+
+.input-box {
+  width: 70%;
+  background-color: rgba(0, 0, 0, .5);
+  color: #fff;
+  text-align: center;
+  font-family: "Indie Flower";
+  box-shadow: 0px 0px 15px #000;
+  border: 1px solid #fff;
+}
+
+.add-btn {
+  background-color: rgba(0, 0, 0, .5);
+  color: #fff;
+  font-family: "Indie Flower";
+  border-radius: 60%;
+  border: 1px solid #fff;
+  box-shadow: 0px 0px 15px #000;
+}
+
+.add-btn:hover {
+  background-color: #fff;
+  color: #000;
   box-shadow: 0px 0px 15px #fff;
+  cursor: pointer;
+}
+
+.item-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.completed {
+  background-color: rgba(0, 0, 0, .5);
+  color: #fff;
+  font-family: "Indie Flower";
+  border-radius: 100px;
+  border: 1px solid #fff;
+  box-shadow: 0px 0px 15px #000;
+}
+
+.completed:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0px 0px 15px #fff;
+  cursor: pointer;
+}
+
+.done {
+  text-decoration: line-through;
 }
