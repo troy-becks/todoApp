@@ -1,7 +1,6 @@
 var userItem = document.querySelector("#userItem");
 var addBtn = document.querySelector("#addBtn");
 var main = document.querySelector("#main");
-var congrats = document.querySelector("#pic");
 var done = 0;
 addBtn.addEventListener("click", function(){
   if (userItem.value.length !== 0) {
@@ -12,6 +11,7 @@ addBtn.addEventListener("click", function(){
     newItem.textContent = userItem.value;
     newButton.textContent = "Task Completed";
     newClear.textContent = "Clear Task";
+    newItem.classList.add("edit");
     newItemBox.classList.add("item-box");
     newButton.classList.add("completed");
     newClear.classList.add("completed");
@@ -19,14 +19,20 @@ addBtn.addEventListener("click", function(){
     newItemBox.appendChild(newItem);
     newItemBox.appendChild(newClear);
     main.appendChild(newItemBox);
-    newButton.onclick = success;
+    newItem.onclick = edit;
+    newButton.onclick = complete;
     newClear.onclick = clear;
   } else {
     alert("please enter a task");
   }
 });
 
-function success() {
+function edit() {
+  var editItem = prompt("What would you like to change it to?");
+  this.textContent = editItem;
+}
+
+function complete() {
   if (done == 0) {
     done += 1;
     this.nextSibling.classList.add("done");
