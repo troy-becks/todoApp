@@ -1,6 +1,9 @@
 var userItem = document.querySelector("#userItem");
 var addBtn = document.querySelector("#addBtn");
 var main = document.querySelector("#main");
+var cat = document.querySelector("#catButton");
+var body = document.querySelector("#body");
+var page = document.querySelector(".page");
 var done = 0;
 addBtn.addEventListener("click", function(){
   if (userItem.value.length !== 0) {
@@ -9,12 +12,12 @@ addBtn.addEventListener("click", function(){
     var newButton = document.createElement("button");
     var newClear = document.createElement("button");
     newItem.textContent = userItem.value;
-    newButton.textContent = "Task Completed";
-    newClear.textContent = "Clear Task";
+    newButton.innerHTML = "<i class='fa fa-check'></i>";
+    newClear.innerHTML = "<i class='fa fa-times'></i>";
     newItem.classList.add("edit");
     newItemBox.classList.add("item-box");
     newButton.classList.add("completed");
-    newClear.classList.add("completed");
+    newClear.classList.add("clear");
     newItemBox.appendChild(newButton);
     newItemBox.appendChild(newItem);
     newItemBox.appendChild(newClear);
@@ -45,3 +48,10 @@ function complete() {
 function clear() {
   this.parentNode.style.display = "none";
 }
+
+cat.addEventListener("click", function() {
+  body.classList.add("body");
+  main.style.display = "none";
+  cat.style.display = "none";
+
+});

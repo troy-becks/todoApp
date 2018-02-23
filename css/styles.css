@@ -6,19 +6,27 @@ body {
   background-size: cover;
 }
 
+.body {
+  background-image: url("../img/cat.gif");
+}
+
 .page {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
 .main {
-  height: 75%;
+  height: 70%;
   width: 50%;
   background-color: rgba(0, 0, 0, .5);
-  border: 3px solid #fff;
-  border-radius: 10px;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   box-shadow: 0px 0px 20px #fff;
   font-family: "Indie Flower";
   color: #fff;
@@ -84,7 +92,23 @@ body {
 
 .completed:hover {
   background-color: #fff;
-  color: #000;
+  color: #0f0;
+  box-shadow: 0px 0px 15px #fff;
+  cursor: pointer;
+}
+
+.clear {
+  background-color: rgba(0, 0, 0, .5);
+  color: #fff;
+  font-family: "Indie Flower";
+  border-radius: 100px;
+  border: 1px solid #fff;
+  box-shadow: 0px 0px 15px #000;
+}
+
+.clear:hover {
+  background-color: #fff;
+  color: #f00;
   box-shadow: 0px 0px 15px #fff;
   cursor: pointer;
 }
@@ -95,10 +119,37 @@ body {
 }
 
 .edit:hover {
-  color: red;
+  color: blue;
   cursor: pointer;
+  text-shadow: 0px 0px 20px #fff;
 }
 
 p {
   margin: 0;
+}
+
+.finally {
+  background-color: rgba(0, 250, 0, .4);
+  width: 50%;
+  height: 50px;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0px 0px 20px #fff;
+  text-align: center;
+  color: #000;
+  font-family: "Indie Flower";
+  font-size: 40px;
+}
+
+.finally:hover {
+  background-color: rgba(0, 250, 0, .6);
+  border-left: 3px solid #0f0;
+  border-right: 3px solid #0f0;
+  border-bottom: 3px solid #0f0;
+  box-shadow: 0px 0px 20px #0f0;
+  cursor: pointer;
+  color: #fff;
 }
